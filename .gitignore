@@ -5,3 +5,8 @@
 Homestead.json
 Homestead.yaml
 .env
+/public/static
+/resources/views/layouts/base.blade.php
+tests/js/unit/coverage
+npm-debug.log
+.DS_Store
