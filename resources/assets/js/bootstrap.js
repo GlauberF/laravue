@@ -1,14 +1,8 @@
-
-window._ = require('lodash');
-
 /**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
+ * We will load application's scss first.
  */
 
-window.$ = window.jQuery = require('jquery');
-require('bootstrap-sass');
+import 'assets/sass/index.scss';
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -16,8 +10,10 @@ require('bootstrap-sass');
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = require('vue');
-require('vue-resource');
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
 
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
@@ -26,9 +22,10 @@ require('vue-resource');
  */
 
 Vue.http.interceptors.push((request, next) => {
-    request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
+  // eslint-disable-next-line
+  request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
 
-    next();
+  next();
 });
 
 /**
