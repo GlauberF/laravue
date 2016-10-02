@@ -1,6 +1,6 @@
 {
     "name": "prwlr/laravue",
-    "description": "A Laravel template used for my own projects. Heavily inspired by the Vue.js webpack template.",
+    "description": "A Laravel template heavily inspired by the Vue.js webpack template.",
     "keywords": ["framework", "laravel", "vue.js"],
     "license": "MIT",
     "type": "project",
