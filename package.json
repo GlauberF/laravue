@@ -1,5 +1,13 @@
 {
   "private": true,
+  "scripts": {
+    "predev": "node build/preDev.js",
+    "dev": " node build/dev-server.js",
+    "build": "node build/build.js",
+    "postbuild": "node build/postbuild.js",
+    "unit": "karma start tests/js/unit/karma.conf.js --single-run || true",
+    "lint": "eslint --ext .js,.vue resources/assets/ tests/js/unit/specs"
+  },
   "dependencies": {
     "babel-runtime": "^6.11.6",
     "function-bind": "^1.1.0",
