@@ -1,8 +1,8 @@
 <template>
   <div class="flex-center position-ref full-height">
     <div class="top-right links" v-if="routeHasLogin">
-      <a href="{{ baseUrl + '/login' }}">Login</a>
-      <a href="{{ baseUrl + '/register' }}">Register</a>
+      <a :href="baseUrl + '/login'">Login</a>
+      <a :href="baseUrl + '/register'">Register</a>
     </div>
 
     <div class="content anim-fade-down">
