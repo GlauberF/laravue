@@ -18,5 +18,5 @@ import './bootstrap';
 /* eslint-disable no-new */
 new Vue({
   el: 'body',
-  components: { Hello },
+  render: h => h(Hello),
 });
