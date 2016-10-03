@@ -17,7 +17,7 @@ It's really easy to get up and running. Just follow these steps:
 3. In you .env file there is a line that reads `APP_URL=http://localhost`. Change that variable to whatever your application url is. This is important for development as you'll see later on. For example for the homestead default url it would look like `APP_URL=http://homestead.app`.
 4. Now you may run `npm run build` to do a bunch stuff like compiling all your assets, splitting your codebase into "chunks", generating maps for these assets, generating the master template your views will extend from with references to these assets and a lot more.
 
-Now open your browser, hit your project's url and you should see the Laravue's welcome page. It's the same as Laravel's with subtle changes. At this point you may want to create a repository and change your remotes.
+Now open your browser, hit your project's url and you should see the Laravue's welcome page. It's the same as Laravel's with subtle changes.
 
 ## How can I start coding with everything you have mentioned ?
 
