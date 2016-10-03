@@ -12,12 +12,10 @@ So that's it, it's opinionated but that's fine since it's for my personal use, b
 
 It's really easy to get up and running. Just follow these steps:
 
-1. Clone the project with `git clone https://github.com/GianlucaCandiotti/laravue.git your-project`.
-2. Go into your project directory and run `composer install` and `npm install` to install all project dependencies.
-3. After that you need to create an .env file. To do that just copy the .env.example file which is already configured with `cp .env.example .env`.
-4. Laravel needs us to set an application key to secure all encrypted data. Run the command `php artisan key:generate` to do so.
-5. In you .env file there is a line that reads `APP_URL=http://localhost`. Change that variable to whatever your application url is. This is important for development as you'll see later on. For example for the homestead default url it would look like `APP_URL=http://homestead.app`.
-6. Now you may run `npm run build` to do a bunch stuff like compiling all your assets, splitting your codebase into "chunks", generating maps for these assets, generating the master template your views will extend from with references to these assets and a lot more.
+1. Start a project by running `composer create-project --prefer-dist prwlr/laravue project-name`.
+2. Go into your project directory and run `npm install` to install npm dependencies.
+3. In you .env file there is a line that reads `APP_URL=http://localhost`. Change that variable to whatever your application url is. This is important for development as you'll see later on. For example for the homestead default url it would look like `APP_URL=http://homestead.app`.
+4. Now you may run `npm run build` to do a bunch stuff like compiling all your assets, splitting your codebase into "chunks", generating maps for these assets, generating the master template your views will extend from with references to these assets and a lot more.
 
 Now open your browser, hit your project's url and you should see the Laravue's welcome page. It's the same as Laravel's with subtle changes. At this point you may want to create a repository and change your remotes.
 
