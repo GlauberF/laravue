@@ -1,3 +1,3 @@
 <script>
-    window.injectors.baseUrl = '<?= urlHelper('') ?>';
+    window.injectors.baseUrl = '{{ Webpack::to('') }}';
 </script>

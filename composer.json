@@ -21,15 +21,12 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        },
-        "files": [
-            "app/Helpers/route.php",
-            "app/Helpers/url.php"
-        ]
+        }
     },
     "autoload-dev": {
         "classmap": [
-            "tests/php/TestCase.php"
+            "tests/php/TestCase.php",
+            "tests/php/helpers"
         ]
     },
     "scripts": {
