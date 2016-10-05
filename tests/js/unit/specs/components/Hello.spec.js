@@ -22,7 +22,7 @@ const Hello = HelloInjector({
 describe('Hello.vue', () => {
   it('should render correct contents', () => {
     const vm = new Vue({
-      template: '<div><hello></hello></div>',
+      render: h => h(Hello),
       components: { Hello },
     }).$mount();
 
