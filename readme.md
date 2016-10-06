@@ -44,7 +44,7 @@ These are the tasks included in the template. I'll just copy most of the descrip
 
 ## So, inside Laravel everything remains the same ?
 
-In order to make everything work I had to create two routing helpers that are almost identical in functionality to the `route()` and `url()` Laravel helpers. They are named `routeHelper()` and `urlHelper()` respectively. You must use them in place of the Laravel ones and may pass them the same arguments and expect the same results. The only difference is that during development they'll generate urls that take into consideration the port webpack is running on and the proxy context. In detects the environment set in your .env file.
+In order to make everything work I had to create two routing helpers that are almost identical in functionality to the `route()` and `url()` Laravel helpers. They are named `Webpack::route()` and `Webpack::to('')` respectively. You must use them in place of the Laravel ones and may pass them the same arguments and expect the same results. The only difference is that during development they'll generate urls that take into consideration the port webpack is running on and the proxy context. It detects the environment set in your .env file.
 
 Apart from that, in order for Webpack to generate assets with hashes, maps and splitting the code into different bundles, we have to pass an HTML template as an input. For development it works a little different but it also makes use of a template for code injection and other stuff. These templates can be found under **'resources/assets/'** and there is one for development and one for production. When running the tasks for development or when building the project, these files will end up being processed and outputted into **'resources/views/layouts/base.blade.php'**. All your views should extend from that master template, and if you want to modify it you may do so changing `index.dev.html` and `index.html`.
 
@@ -56,7 +56,7 @@ Basically Webpack has some tools that can only work within its development envir
 
 So now we can start up the dev server and we would have to open our project in a browser using port 8080, the thing is this is running through Webpack so it can't handle our blade templates, our routes, etc. So inside the configuration I've set a up a proxy that handles every request to `/dev` and passes it to our `APP_URL` defined in the .env file. With this set up we let Webpack take care of all of our assets in a very awesome way and still let Laravel handle the requests as intended.
 
-And that's it, now the only thing to worry about is redirection since all redirects should be pointing to **'APP_URL:8080/dev'** as the base url. That's why you must make use of the helpers: `routeHelper()` and `urlHelper()` as stated earlier. They'll handle that for you during development and work exactly like their counterparts `route()` and `url()` while in production.
+And that's it, now the only thing to worry about is redirection since all redirects should be pointing to **'APP_URL:8080/dev'** as the base url. That's why you must make use of the helpers: `Webpack::route()` and `Webpack::to()` as stated earlier. They'll handle that for you during development and work exactly like their counterparts `route()` and `url()` while in production.
 
 ## So, anything else ?
 
