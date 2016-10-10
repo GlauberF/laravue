@@ -1,4 +1,4 @@
-Laravue contributors (sorted alphabeticaly)
+Laravue contributors
 ============================================
 
 * **[Jose Carlos Pereyra](https://github.com/jopereyral)**
