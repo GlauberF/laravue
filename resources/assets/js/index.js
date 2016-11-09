@@ -11,12 +11,11 @@ import './bootstrap';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
- * the body of the page. From here, you may begin adding components to
- * the application, or feel free to tweak this setup for your needs.
+ * the element with the "hello" identifier in the page.
  */
 
 /* eslint-disable no-new */
 new Vue({
-  el: 'body',
+  el: '#hello',
   render: h => h(Hello),
 });
